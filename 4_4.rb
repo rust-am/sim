@@ -1,0 +1,1 @@
+day = { night: [23, 24, 0, 1, 2, 3], morning: (4..10).to_a, day: (11..15).to_a, evening: (16..22).to_a }
