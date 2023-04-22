@@ -7,7 +7,7 @@ class Array
     else
       out = to_enum :mapp
     end
-    
+
     new_arr
   end
 end
