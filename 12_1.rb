@@ -5,7 +5,7 @@ class Array
     if block_given?
       self.each { |e| new_arr << yield(e) }
     else
-      out = to_enum :mapp
+      new_arr = to_enum :my_map
     end
 
     new_arr
