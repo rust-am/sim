@@ -1,7 +1,7 @@
 class Vector
   def initialize(x1, y1, x2, y2)
     @point1 = Point.new(x: x1, y: y1)
-    @point2 = Point.new(x: x2, y  y2)
+    @point2 = Point.new(x: x2, y: y2)
     @vector = [@point1, @point2]
   end
 
