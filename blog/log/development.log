@@ -1,0 +1,69 @@
+Started GET "/" for ::1 at 2023-05-03 18:38:35 +0300
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 355)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+node:internal/crypto/hash:71
+  this[kHandle] = new _Hash(algorithm, xofLen);
+                  ^
+
+Error: error:0308010C:digital envelope routines::unsupported
+    at new Hash (node:internal/crypto/hash:71:19)
+    at Object.createHash (node:crypto:140:10)
+    at module.exports (/home/rust/ruby/sim/blog/node_modules/webpack/lib/util/createHash.js:135:53)
+    at NormalModule._initBuildHash (/home/rust/ruby/sim/blog/node_modules/webpack/lib/NormalModule.js:417:16)
+    at handleParseError (/home/rust/ruby/sim/blog/node_modules/webpack/lib/NormalModule.js:471:10)
+    at /home/rust/ruby/sim/blog/node_modules/webpack/lib/NormalModule.js:503:5
+    at /home/rust/ruby/sim/blog/node_modules/webpack/lib/NormalModule.js:358:12
+    at /home/rust/ruby/sim/blog/node_modules/loader-runner/lib/LoaderRunner.js:373:3
+    at iterateNormalLoaders (/home/rust/ruby/sim/blog/node_modules/loader-runner/lib/LoaderRunner.js:214:10)
+    at iterateNormalLoaders (/home/rust/ruby/sim/blog/node_modules/loader-runner/lib/LoaderRunner.js:221:10)
+    at /home/rust/ruby/sim/blog/node_modules/loader-runner/lib/LoaderRunner.js:236:3
+    at context.callback (/home/rust/ruby/sim/blog/node_modules/loader-runner/lib/LoaderRunner.js:111:13)
+    at /home/rust/ruby/sim/blog/node_modules/babel-loader/lib/index.js:44:71 {
+  opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ],
+  library: 'digital envelope routines',
+  reason: 'unsupported',
+  code: 'ERR_OSSL_EVP_UNSUPPORTED'
+}
+
+Node.js v19.0.1
+
+  Rendered layout layouts/application.html.erb (Duration: 2208.2ms | Allocations: 18789)
+Completed 500 Internal Server Error in 2227ms (ActiveRecord: 0.0ms | Allocations: 22430)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/rust/ruby/sim/blog/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2023-05-03 18:40:34 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 243)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 7778)
+Completed 200 OK in 24ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 10372)
+
+
